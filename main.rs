@@ -24,15 +24,15 @@ fn main() {
             println!("Kya seth , aukaat se jyada kyu lagaa raha ? Chal koi naa , abki baar aukaat me bol");
             continue;
         }
-
+        // Letting the user guess a number between 1 to 20
         let mut guess_i = String::new();
         println!("Haa seth chal , 1 se leke 20 tak me koi number bol ab :) ");
         io::stdin().read_line(&mut guess_i).expect("Failed to read input");
         let mut guess: i32 = guess_i.trim().parse().expect("kya seth , kar dia na chutiyaap , chal ab shuru se khel fir se , goli to ghuma di thi maine :) ");
-        
-        if (guess >= 1) && (guess <= 20) {
-            let mut rgn = rand::thread_rng();
 
+        if (guess >= 1) && (guess <= 20) {
+            // Assigning computer with a random number between 1 - 20.
+            let mut rgn = rand::thread_rng();
             let mut luck = rgn.gen_range(0..20);
             
             if guess == luck {
